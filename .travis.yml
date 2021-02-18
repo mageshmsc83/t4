@@ -4,4 +4,4 @@ Services:
 before_install:
   - docker build -t mageshmsc83/travis_depl -f Dockerfile.dev .
 script:
-  - docker run mageshmsc83/travis_depl npm run test -- --coverage
+  - docker run -e CI=true mageshmsc83/travis_depl npm run test
