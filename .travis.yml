@@ -5,7 +5,7 @@ Services:
 before_install:
   - docker build -t mageshmsc83/t4 -f Dockerfile.dev .
 script:
-  - docker run mageshmsc83/t4 npm run test -- --coverage
+  - docker run -e CI=true mageshmsc83/t4 npm run test -- --coverage
 deploy:
   provider: elasticbeanstalk
   region: 'us-east-2'
