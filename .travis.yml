@@ -9,8 +9,8 @@ script:
 deploy:
   provider: elasticbeanstalk
   region: 'us-east-2'
-  app: 'mydocker'
-  env: 'Mydocker-env'
+  app: 'mydocker1'
+  env: 'mydocker1-env'
   bucket-name: 'elasticbeanstalk-us-east-2-306439872146'
   bucket-path: 'mydocker'
   on:
