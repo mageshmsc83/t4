@@ -5,14 +5,14 @@ Services:
 before_install:
   - docker build -t mageshmsc83/t4 .
 script:
-  - docker run mageshmsc83/t4 
+  - docker run mageshmsc83/t4
 deploy:
   provider: elasticbeanstalk
-  region: "us-east-2"
-  app: "mydocker"
-  env: "M"ydocker-env"
-  bucket-name: "elasticbeanstalk-us-east-2-306439872146"
-  bucket-path: "mydocker"
+  region: 'us-east-2'
+  app: 'mydocker'
+  env: 'M"ydocker-env'
+  bucket-name: 'elasticbeanstalk-us-east-2-306439872146'
+  bucket-path: 'mydocker'
   on:
     branch: master
 access_key_id: $AWS_KEY
