@@ -3,7 +3,7 @@ language: generic
 Services:
   - docker
 before_install:
-  - docker build -t mageshmsc83/t4 -f Dockerfile.dev .
+  - docker build -t mageshmsc83/t4 -f dockerfile.dev .
 script:
   - docker run -e cI=true mageshmsc83/t4 npm run test -- --coverage
 deploy:
